@@ -6,13 +6,23 @@ import Badge from "../components/Badge.astro";
 
 <Layout title="Welcome to Astro.">
   <main>
-    <h1 class="">
-      Hey, I'm Gustavo <Badge>Available for hire</Badge>
-    </h1>
-    <h2>
-      Web developer with 3 years of experience in engineering project
-      development, I'm familiar with agiles methodologies that allow mw to adapt
-      quickly to changes and work effiently in a team
-    </h2>
+    <section class="w-full lg:w-[740px] mx-auto py-44">
+      <h1 class="text-5xl font-bold flex flex-row gap-x-4 pb-6">
+        Hey, I'm Gustavo <a
+          href="https://www.linkedin.com/in/developer-gustavo-mu%C3%B1iz-barrios-86708b121/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Available for hire</Badge>
+        </a>
+      </h1>
+      <h2 class="text-2xl text-wrap">
+        Welcome! I'm a <span class="font-bold text-[#EF8354]"
+          >Web Developer</span
+        > with three years of experience in engineering project development. Feel
+        free to explore my projects to see my skills as a web developer.
+      </h2>
+    </section>
   </main>
 </Layout>
