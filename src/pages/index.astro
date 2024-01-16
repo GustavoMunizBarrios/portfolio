@@ -4,9 +4,11 @@ import Card from "../components/Card.astro";
 import Badge from "../components/Badge.astro";
 import Linkedin from "../components/icons/Linkedin.astro";
 import Github from "../components/icons/Github.astro";
+import SocialPill from "../components/icons/SocialPill.astro";
+import Mail from "../components/icons/Mail.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Web developer Gustavo Muñiz">
   <main>
     <section class="w-full lg:w-[740px] mx-auto py-44">
       <h1 class="text-5xl font-bold flex flex-row gap-x-4 pb-6">
@@ -25,16 +27,20 @@ import Github from "../components/icons/Github.astro";
         > with three years of experience in engineering project development. Feel
         free to explore my projects to see my skills as a web developer.
       </h2>
-      <ul>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/developer-gustavo-mu%C3%B1iz-barrios-86708b121/"
-          >
-            <Linkedin class="w-6 h-6" />
-            LinkedIn
-          </a>
-        </li>
-      </ul>
+      <nav class="flex gap-x-5 mt-5">
+        <SocialPill href="https://www.linkedin.com/in/developer-gustavo">
+          <Linkedin class="size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/GustavoMunizBarrios/">
+          <Github class="size-6" />
+          GitHub
+        </SocialPill>
+        <SocialPill href="https://github.com/GustavoMunizBarrios/">
+          <Mail class="size-6" />
+          j.gustavomb1984@hotmail.com
+        </SocialPill>
+      </nav>
     </section>
   </main>
 </Layout>
