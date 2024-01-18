@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Badge from "../components/Badge.astro";
 import Timeline from "../components/Timeline.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import JobIcon from "../components/icons/JobIcon.astro";
 import Linkedin from "../components/icons/Linkedin.astro";
 import Github from "../components/icons/Github.astro";
 import SocialPill from "../components/icons/SocialPill.astro";
@@ -14,7 +16,7 @@ import Mail from "../components/icons/Mail.astro";
   description="I'm a Web Developer with three years of experience in engineering project development"
 >
   <main>
-    <section class="w-full lg:w-[740px] mx-auto py-44">
+    <SectionContainer>
       <h1 class="text-5xl font-bold flex flex-row gap-x-4 pb-6">
         Hey, I'm Gustavo <a
           href="https://www.linkedin.com/in/developer-gustavo-mu%C3%B1iz-barrios-86708b121/"
@@ -45,9 +47,14 @@ import Mail from "../components/icons/Mail.astro";
           Email
         </SocialPill>
       </nav>
-    </section>
-    <section class="w-full lg:w-[740px] mx-auto">
+    </SectionContainer>
+    <SectionContainer>
+      <h2 class="text-3xl font-semi-bold mb-5 flex gap-x-3 items-center">
+        <JobIcon class="size-7" />
+        Work Experience
+      </h2>
+
       <Timeline />
-    </section>
+    </SectionContainer>
   </main>
 </Layout>
