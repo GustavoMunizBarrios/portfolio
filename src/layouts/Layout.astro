@@ -1,6 +1,7 @@
 ---
 import "@fontsource-variable/onest";
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 interface Props {
   title: string;
   description: string;
@@ -26,6 +27,7 @@ const { title, description } = Astro.props;
     </div>
     <Header />
     <slot />
+    <Footer />
     <!-- Here in slot is going to render our routes -->
   </body>
 </html>
@@ -40,7 +42,10 @@ const { title, description } = Astro.props;
   body {
     display: flex;
     flex-direction: column;
-    min-heightht: 100vh;
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow-x: hidden;
+    overflow-x: none;
   }
   @media (prefers-reduced-motion: reduce) {
     html {
