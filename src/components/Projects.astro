@@ -1,11 +1,31 @@
 ---
 const PROJECTS = [
   {
-    title: "Project 1",
+    title: "Countries of the world",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi quis eleifend quam adipiscing vitae proin sagittis. ",
     link: "#",
     github: "#",
+    image: "https://th.bing.com/th/id/OIP.5fuBrjl9lMSZuE3198yG8AHaDq?w=315&h=173&c=7&r=0&o=5&pid=1.7",
+    tags: ["HTML", "CSS", "JavaScript"],
   },
 ];
 ---
+
+{
+  PROJECTS.map((project) => (
+    <article class="ml-3">
+      <h3 class="text-2xl font-semibold text-[#EF8354] mb-2">{project.title}</h3>
+      <p class="text-lg mb-4 text-pretty">{project.description}</p>
+      <ul>
+        {project.tags.map((tag) => (
+          <li>{tag}</li>
+        ))}
+      </ul>
+      <img
+       class="rounded shadow-2xl shadow-black/25"
+       src={project.image}
+       alt=`Screenshot of the project ${project.title}`/>
+    </article>
+  ))
+}
