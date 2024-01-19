@@ -4,11 +4,13 @@ import Card from "../components/Card.astro";
 import Badge from "../components/Badge.astro";
 import Timeline from "../components/Timeline.astro";
 import SectionContainer from "../components/SectionContainer.astro";
+import Projecs from "../components/Projects.astro";
 import JobIcon from "../components/icons/JobIcon.astro";
 import Linkedin from "../components/icons/Linkedin.astro";
 import Github from "../components/icons/Github.astro";
 import SocialPill from "../components/icons/SocialPill.astro";
 import Mail from "../components/icons/Mail.astro";
+import ProjectsIcon from "../components/icons/ProjectsIcon.astro";
 ---
 
 <Layout
@@ -50,16 +52,30 @@ import Mail from "../components/icons/Mail.astro";
         </SocialPill>
       </nav>
     </SectionContainer>
-    <!-- Experience Section Timeline -->
+    <!-- ----------------------------- -->
+    <!-- Experience Section - Timeline -->
+    <!-- ----------------------------- -->
     <SectionContainer id="experience">
       <h2
         class="text-3xl font-semibold text-gray-900 mb-7 flex gap-x-3 items-center"
       >
-        <JobIcon class="size-7" />
+        <JobIcon class="size-8" />
         Work Experience
       </h2>
 
       <Timeline />
+    </SectionContainer>
+    <!-- ---------------- -->
+    <!-- Projects Section -->
+    <!-- ---------------- -->
+    <SectionContainer id="projects">
+      <h2
+        class="text-3xl font-semibold text-gray-900 mb-7 flex gap-x-3 items-center"
+      >
+        <ProjectsIcon class="size-8" />
+        Projects
+      </h2>
+      <Projecs />
     </SectionContainer>
   </main>
 </Layout>
