@@ -1,4 +1,43 @@
 ---
+import JavascriptIcon from "./icons/JavascriptIcon.astro";
+import TailwindIcon from "./icons/TailwindIcon.astro"
+import ReactIcon from "./icons/ReactIcon.astro"
+import TypescriptIcon from "./icons/TypescriptIcon.astro"
+import ExpressIcon from "./icons/ExpressIcon.astro"
+import PostgreSQL from "./icons/PostgreSQLIcon.astro"
+
+const TAGS ={
+  JAVASCRIPT:{
+    name:'JavaScript',
+    class: ' text-black',
+    icon: JavascriptIcon
+  },
+  TAILWIND: {
+    name: 'Tailwind CSS',
+    class: ' text-black',
+    icon: TailwindIcon
+  },
+  REACT: {
+    name: 'React',
+    class: ' text-black',
+    icon: ReactIcon
+  },
+  TYPESCRIPT: {
+    name: 'Typescript',
+    class: ' text-black',
+    icon: TypescriptIcon
+  },
+  EXPRESS: {
+    name: 'Express.js',
+    class: 'text-black',
+    icon: ExpressIcon
+  },
+  POSTGRESQL: {
+    name: 'PostgreSQL',
+    class: 'text-black',
+    icon: PostgreSQL
+  }
+}
 const PROJECTS = [
   {
     title: "Countries of the world",
@@ -7,25 +46,30 @@ const PROJECTS = [
     link: "#",
     github: "#",
     image: "https://th.bing.com/th/id/OIP.5fuBrjl9lMSZuE3198yG8AHaDq?w=315&h=173&c=7&r=0&o=5&pid=1.7",
-    tags: ["HTML", "CSS", "JavaScript"],
+    tags: [TAGS.JAVASCRIPT, TAGS.TAILWIND]
   },
 ];
 ---
 
 {
-  PROJECTS.map((project) => (
+  PROJECTS.map(({image, title, description, tags}) => (
     <article class="ml-3">
-      <h3 class="text-2xl font-semibold text-[#EF8354] mb-2">{project.title}</h3>
-      <p class="text-lg mb-4 text-pretty">{project.description}</p>
-      <ul>
-        {project.tags.map((tag) => (
-          <li>{tag}</li>
+      <h3 class="text-2xl font-semibold text-[#EF8354] mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-4 flex-row">
+        {tags.map((tag) => (
+          <li class="pb-4">
+            <span class={`flex gap-x-2 border rounded-full text-sm ${tag.class} py-2 px-3`}>
+              <tag.icon class="size-5 "/>
+              {tag.name}
+            </span>
+          </li>
         ))}
       </ul>
       <img
        class="rounded shadow-2xl shadow-black/25"
-       src={project.image}
-       alt=`Screenshot of the project ${project.title}`/>
+       src={image}
+       alt=`Screenshot of the project ${title}`/>
     </article>
   ))
 }
