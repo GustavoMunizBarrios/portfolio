@@ -1,75 +1,104 @@
 ---
 import JavascriptIcon from "./icons/JavascriptIcon.astro";
-import TailwindIcon from "./icons/TailwindIcon.astro"
-import ReactIcon from "./icons/ReactIcon.astro"
-import TypescriptIcon from "./icons/TypescriptIcon.astro"
-import ExpressIcon from "./icons/ExpressIcon.astro"
-import PostgreSQL from "./icons/PostgreSQLIcon.astro"
+import TailwindIcon from "./icons/TailwindIcon.astro";
+import ReactIcon from "./icons/ReactIcon.astro";
+import TypescriptIcon from "./icons/TypescriptIcon.astro";
+import ExpressIcon from "./icons/ExpressIcon.astro";
+import PostgreSQL from "./icons/PostgreSQLIcon.astro";
 
-const TAGS ={
-  JAVASCRIPT:{
-    name:'JavaScript',
-    class: ' text-black',
-    icon: JavascriptIcon
+import CountriesImage from "./Images/countries_of_the_world.png";
+
+const TAGS = {
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-blue-100 text-black",
+    icon: JavascriptIcon,
   },
   TAILWIND: {
-    name: 'Tailwind CSS',
-    class: ' text-black',
-    icon: TailwindIcon
+    name: "Tailwind CSS",
+    class: "bg-blue-100 text-black",
+    icon: TailwindIcon,
   },
   REACT: {
-    name: 'React',
-    class: ' text-black',
-    icon: ReactIcon
+    name: "React",
+    class: "bg-blue-100 text-black",
+    icon: ReactIcon,
   },
   TYPESCRIPT: {
-    name: 'Typescript',
-    class: ' text-black',
-    icon: TypescriptIcon
+    name: "Typescript",
+    class: "bg-blue-100 text-black",
+    icon: TypescriptIcon,
   },
   EXPRESS: {
-    name: 'Express.js',
-    class: 'text-black',
-    icon: ExpressIcon
+    name: "Express.js",
+    class: "bg-blue-100 text-black",
+    icon: ExpressIcon,
   },
   POSTGRESQL: {
-    name: 'PostgreSQL',
-    class: 'text-black',
-    icon: PostgreSQL
-  }
-}
+    name: "PostgreSQL",
+    class: "bg-blue-100 text-black",
+    icon: PostgreSQL,
+  },
+};
 const PROJECTS = [
   {
     title: "Countries of the world",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisi quis eleifend quam adipiscing vitae proin sagittis. ",
+      "Project that gathers an extensive database with information of all the countries of the world, from its population to its extension, you can also save information about the activities that you can do in each of the countries. The application is fully responsive.",
     link: "#",
     github: "#",
-    image: "https://th.bing.com/th/id/OIP.5fuBrjl9lMSZuE3198yG8AHaDq?w=315&h=173&c=7&r=0&o=5&pid=1.7",
-    tags: [TAGS.JAVASCRIPT, TAGS.TAILWIND]
+    image: CountriesImage,
+    tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.EXPRESS, TAGS.POSTGRESQL],
+  },
+  {
+    title: "Rick and Morty wiki",
+    description:
+      "Compilation of characters from the Rick and Morty series, the application has different filters to sort characters, and a search bar.",
+    link: "#",
+    github: "#",
+    image: CountriesImage,
+    tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.EXPRESS],
+  },
+  {
+    title: "Custom Craft",
+    description:
+      "Custom Craft is an online store where you can pre-visualize your clothes in a 3D model with the possibility to customize your own clothes, adding color and size.",
+    link: "https://proyecto-final-eight-beige.vercel.app/",
+    github: "https://github.com/fedeMaidana/Proyecto_Final",
+    image: CountriesImage,
+    tags: [
+      TAGS.REACT,
+      TAGS.JAVASCRIPT,
+      TAGS.TAILWIND,
+      TAGS.EXPRESS,
+      TAGS.POSTGRESQL,
+    ],
   },
 ];
 ---
 
 {
-  PROJECTS.map(({image, title, description, tags}) => (
+  PROJECTS.map(({ image, title, description, tags }) => (
     <article class="ml-3">
       <h3 class="text-2xl font-semibold text-[#EF8354] mb-2">{title}</h3>
       <p class="text-lg mb-4 text-pretty">{description}</p>
       <ul class="flex gap-x-4 flex-row">
         {tags.map((tag) => (
           <li class="pb-4">
-            <span class={`flex gap-x-2 border rounded-full text-sm ${tag.class} py-2 px-3`}>
-              <tag.icon class="size-5 "/>
+            <span
+              class={`flex gap-x-2 border rounded-full text-sm ${tag.class} py-2 px-3`}
+            >
+              <tag.icon class="size-5 " />
               {tag.name}
             </span>
           </li>
         ))}
       </ul>
       <img
-       class="rounded shadow-2xl shadow-black/25"
-       src={image}
-       alt=`Screenshot of the project ${title}`/>
+        class=""
+        src={image.src}
+        alt={`Screenshot of the project ${title}`}
+      />
     </article>
   ))
 }
