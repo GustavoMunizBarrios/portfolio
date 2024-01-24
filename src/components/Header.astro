@@ -5,18 +5,22 @@ import LanguageDropdown from "./LanguageDropdown.astro";
 <header
   class="flex justify-between items-center py-5 w-full xl:w-[1110px] mx-auto"
 >
-  <img
-    class="rounded-full size-12"
-    src="https://th.bing.com/th/id/OIP.Zd0M82wkkQcSla_pP1dGpgAAAA?rs=1&pid=ImgDetMain"
-    alt="profile of Gustavo"
-  />
+  <a
+    href="https://www.linkedin.com/in/developer-gustavo-mu%C3%B1iz-barrios-86708b121/"
+  >
+    <img
+      class="rounded-full size-12"
+      src="https://th.bing.com/th/id/OIP.Zd0M82wkkQcSla_pP1dGpgAAAA?rs=1&pid=ImgDetMain"
+      alt="profile of Gustavo"
+    />
+  </a>
 
   <nav class="flex flex-row gap-x-10">
-    <a href="/">Home</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+    <a href="/" class="hover:underline">Home</a>
+    <a href="#projects" class="hover:underline">Projects</a>
+    <a href="#experience" class="hover:underline">Experience</a>
+    <a href="#about" class="hover:underline">About</a>
+    <a href="#contact" class="hover:underline">Contact</a>
     <LanguageDropdown />
   </nav>
 </header>

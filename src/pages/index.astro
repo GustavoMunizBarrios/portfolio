@@ -52,6 +52,18 @@ import ProjectsIcon from "../components/icons/ProjectsIcon.astro";
         </SocialPill>
       </nav>
     </SectionContainer>
+    <!-- ---------------- -->
+    <!-- Projects Section -->
+    <!-- ---------------- -->
+    <SectionContainer id="projects">
+      <h2
+        class="text-3xl font-semibold text-gray-900 mb-7 flex gap-x-3 items-center"
+      >
+        <ProjectsIcon class="size-8" />
+        Projects
+      </h2>
+      <Projecs />
+    </SectionContainer>
     <!-- ----------------------------- -->
     <!-- Experience Section - Timeline -->
     <!-- ----------------------------- -->
@@ -64,18 +76,6 @@ import ProjectsIcon from "../components/icons/ProjectsIcon.astro";
       </h2>
 
       <Timeline />
-    </SectionContainer>
-    <!-- ---------------- -->
-    <!-- Projects Section -->
-    <!-- ---------------- -->
-    <SectionContainer id="projects">
-      <h2
-        class="text-3xl font-semibold text-gray-900 mb-7 flex gap-x-3 items-center"
-      >
-        <ProjectsIcon class="size-8" />
-        Projects
-      </h2>
-      <Projecs />
     </SectionContainer>
   </main>
 </Layout>
