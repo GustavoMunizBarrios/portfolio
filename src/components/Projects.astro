@@ -5,6 +5,8 @@ import ReactIcon from "./icons/ReactIcon.astro";
 import TypescriptIcon from "./icons/TypescriptIcon.astro";
 import ExpressIcon from "./icons/ExpressIcon.astro";
 import PostgreSQL from "./icons/PostgreSQLIcon.astro";
+import SocialPill from "./icons/SocialPill.astro";
+import Github from "./icons/Github.astro";
 
 import CountriesImage from "./Images/countries_of_the_world.png";
 import RickandmortyImage from "./Images/rickandmorty_wbg_compress.png";
@@ -47,8 +49,8 @@ const PROJECTS = [
     title: "Countries of the world",
     description:
       "Project that gathers an extensive database with information of all the countries of the world, from its population to its extension, you can also save information about the activities that you can do in each of the countries. The application is fully responsive.",
-    link: "#",
-    github: "#",
+    link: "https://pi-countries-frontend-production.up.railway.app/",
+    github: "https://github.com/GustavoMunizBarrios/pi-countries-frontend",
     image: CountriesImage,
     tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.EXPRESS, TAGS.POSTGRESQL],
   },
@@ -56,8 +58,8 @@ const PROJECTS = [
     title: "Rick and Morty wiki",
     description:
       "Compilation of characters from the Rick and Morty series, the application has different filters to sort characters, and a search bar.",
-    link: "#",
-    github: "#",
+    link: "https://rick-and-morty-frontend-production.up.railway.app/",
+    github: "https://github.com/GustavoMunizBarrios/rick-and-morty-",
     image: RickandmortyImage,
     tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.EXPRESS, TAGS.POSTGRESQL],
   },
@@ -80,9 +82,22 @@ const PROJECTS = [
 ---
 
 {
-  PROJECTS.map(({ image, title, description, tags }) => (
+  PROJECTS.map(({ image, title, description, tags, link, github }) => (
     <article class="ml-3">
-      <h3 class="text-2xl font-semibold text-[#EF8354] mb-2">{title}</h3>
+      <div class="flex items-center justify-between">
+        <h3 class="text-2xl font-semibold text-[#EF8354] mb-2">
+          {" "}
+          <a href={link} class="hover:underline">
+            {title}
+          </a>{" "}
+        </h3>
+        <div class=" ml-6 mb-4">
+          <SocialPill href={github}>
+            <Github class="size-4 md:size-6 " />
+            GitHub
+          </SocialPill>
+        </div>
+      </div>
       <p class="text-lg mb-4 text-pretty">{description}</p>
       <ul class="flex gap-x-4 flex-row">
         {tags.map((tag) => (
@@ -96,11 +111,13 @@ const PROJECTS = [
           </li>
         ))}
       </ul>
-      <img
-        class=""
-        src={image.src}
-        alt={`Screenshot of the project ${title}`}
-      />
+      <a href={link}>
+        <img
+          class="transform hover:scale-105 transition duration-300 ease-in-out"
+          src={image.src}
+          alt={`Screenshot of the project ${title}`}
+        />
+      </a>
     </article>
   ))
 }
