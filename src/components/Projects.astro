@@ -1,5 +1,7 @@
 ---
 import JavascriptIcon from "./icons/JavascriptIcon.astro";
+import CssIcon from "./icons/CSSIcon.astro";
+import HtmlIcon from "./icons/HtmlIcon.astro";
 import TailwindIcon from "./icons/TailwindIcon.astro";
 import ReactIcon from "./icons/ReactIcon.astro";
 import TypescriptIcon from "./icons/TypescriptIcon.astro";
@@ -11,12 +13,23 @@ import Github from "./icons/Github.astro";
 import CountriesImage from "./Images/countries_of_the_world.png";
 import RickandmortyImage from "./Images/rickandmorty_wbg_compress.png";
 import CustomcraftImage from "./Images/customcraft01.png";
+import TravelImage from "./Images/travel-list-withoutBG-compress.png"
 
 const TAGS = {
   JAVASCRIPT: {
     name: "JavaScript",
     class: "bg-blue-100 text-black",
     icon: JavascriptIcon,
+  },
+    CSS: {
+    name: "CSS",
+    class: "bg-blue-100 text-black",
+    icon: CssIcon,
+  },
+    HTML: {
+    name: "HTML",
+    class: "bg-blue-100 text-black",
+    icon: HtmlIcon,
   },
   TAILWIND: {
     name: "Tailwind CSS",
@@ -62,6 +75,15 @@ const PROJECTS = [
     github: "https://github.com/GustavoMunizBarrios/rick-and-morty-",
     image: RickandmortyImage,
     tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.EXPRESS, TAGS.POSTGRESQL],
+  },
+  {
+    title: "Packing List",
+    description:
+      "Travel List is a perfect application for those trips where you can't forget anything. It records the amount and items you need, you can mark them as packed or delete them if you have made a mistake. You can also sort them by description or status. At the bottom you can see how many items you have left to pack.",
+    link: "https://travel-list-pi-two.vercel.app/",
+    github: "https://github.com/GustavoMunizBarrios/travel-list",
+    image: TravelImage,
+    tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.CSS, TAGS.HTML],
   },
   {
     title: "Custom Craft",
