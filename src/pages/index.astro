@@ -10,6 +10,7 @@ import Github from "../components/icons/Github.astro";
 import SocialPill from "../components/icons/SocialPill.astro";
 import Mail from "../components/icons/Mail.astro";
 import ProjectsIcon from "../components/icons/ProjectsIcon.astro";
+import profileCompress from "../components/Images/profileCompress.png";
 // test
 ---
 
@@ -87,6 +88,11 @@ import ProjectsIcon from "../components/icons/ProjectsIcon.astro";
         <JobIcon class="size-8" />
         About Me
       </h2>
+      <img
+        class="rounded-full size-[10rem] z-50 transform transition-all duration-200 hover:scale-110"
+        src={profileCompress}
+        alt="profile of Gustavo"
+      />
     </SectionContainer>
   </main>
 </Layout>
