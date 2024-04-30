@@ -1,26 +1,30 @@
 <header
-  class="sticky top-0 z-50
-   flex justify-center items-center py-5 w-full mx-auto
-    xl:w-[900px] lg:w-[500px] md:w-[500px] 
-    bg-white 
-    "
-> <!-- bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)] -->
+  class="sticky top-0 z-20
+   flex justify-center items-center py-5 w-[100%] mx-auto
+    text-lg
+    bg-[#4384da80] bg-opacity-50 backdrop-blur-[10px]"
+>
+  <!-- <div class="absolute inset-0 bg-white blur-lg z-10"></div> -->
+  <!-- bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)] -->
   <a
-    class="mr-10 hidden xs:block"
+    class="relative mr-10 hidden xs:block z-50"
     href="https://www.linkedin.com/in/developer-gustavo-mu%C3%B1iz-barrios-86708b121/"
   >
     <img
-      class="rounded-full size-12"
+      class="rounded-full size-14 z-50 transform transition-all duration-200 hover:scale-110"
       src="https://th.bing.com/th/id/OIP.Zd0M82wkkQcSla_pP1dGpgAAAA?rs=1&pid=ImgDetMain"
       alt="profile of Gustavo"
     />
   </a>
 
-  <nav class="flex flex-row gap-x-10 ">
-    <a href="/" class="hover:underline">Home</a>
-    <a href="#projects" class="hover:underline">Projects</a>
-    <a href="#experience" class="hover:underline">Experience</a>
-    <a href="#about" class="hover:underline">About</a>
+  <nav class="flex flex-row gap-x-10 z-50">
+    <a href="/" class="hover:underline hover:text-[#df5e4d]">Home</a>
+    <a href="#projects" class="hover:underline hover:text-[#df5e4d]">Projects</a
+    >
+    <a href="#experience" class="hover:underline hover:text-[#df5e4d]"
+      >Experience</a
+    >
+    <a href="#about" class="hover:underline hover:text-[#df5e4d]">About</a>
     <!--  <a href="#contact" class="hover:underline">Contact</a> -->
     <!-- <LanguageDropdown /> -->
   </nav>
