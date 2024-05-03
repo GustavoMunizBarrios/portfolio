@@ -89,11 +89,24 @@ import profileCompress from "../components/Images/profileCompress.png";
         <JobIcon class="size-8" />
         About Me
       </h2>
-      <img
-        class="rounded-full size-[10rem] z-50 transform transition-all duration-200 hover:scale-110"
-        src={profileCompress.src}
-        alt="profile of Gustavo"
-      />
+      <div class="flex items-center">
+        <img
+          class="mr-5 rounded-full size-[10rem] z-50 transform transition-all duration-200 hover:scale-110"
+          src={profileCompress.src}
+          alt="profile of Gustavo"
+        />
+        <p class="text-gray-700 text-lg mt-5">
+          Hi! I'm <span class="font-bold text-[#ef8354]">Gustavo Muñiz</span> I am
+          a web developer and I have 3 years of experience in engineering project
+          development, I have had the opportunity to work in different areas and
+          develop skills in project management, programming and agile methodologies.
+          <br />
+          <br />
+          I am focused on <span class="font-bold text-[#1e40af]">Front-end</span
+          > development. I have experience doing multiple projects and have worked
+          in a real development environment with a team of developers.
+        </p>
+      </div>
     </SectionContainer>
   </main>
 </Layout>
