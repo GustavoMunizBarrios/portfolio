@@ -1,8 +1,20 @@
-
+import { useStore } from '@nanostores/react';
 import { atom } from 'nanostores';
-const selected = atom(true);
+export const isLanguageToggle = atom(true);
 
 export default function LanguageToggle() {
+
+    const $isLanguageToggle = useStore(isLanguageToggle)
+
+    const handleLanguageEN = () => {
+        isLanguageToggle.set(true)
+        console.log(`Estado true EN: ${$isLanguageToggle}`);
+    }
+    const handleLanguageES = () => {
+        isLanguageToggle.set(false)
+        console.log(`Estado false ES: ${$isLanguageToggle}`);
+    }
+
     return (
         <>
             <div class="w-[13rem] h-[3rem] ml-[2.5rem] flex text-center content-center items-center rounded-full">
@@ -14,7 +26,10 @@ export default function LanguageToggle() {
                     >
                         <div class="relative w-full h-full flex items-center">
                             <div class='flex w-[9rem] justify-center'>
-                                <button class="mr-3 text-[1rem]">EN</button>
+
+                                <button
+                                    class={`mr-3 text-[1rem] z-50 ${!$isLanguageToggle ? 'text-[#7f858f]' : 'null'}`}
+                                    onClick={handleLanguageEN}>EN</button>
                                 <img
                                     width="26"
                                     height="26"
@@ -23,7 +38,9 @@ export default function LanguageToggle() {
                                 />
                             </div>
                             <div class="flex w-[9rem] justify-center">
-                                <button class="mr-3 text-[1rem]">ES</button>
+                                <button
+                                    class={`mr-3 text-[1rem] z-50 ${$isLanguageToggle ? 'text-[#7f858f]' : 'null'}`}
+                                    onClick={handleLanguageES} >ES</button>
                                 <img
                                     width="26"
                                     height="26"
